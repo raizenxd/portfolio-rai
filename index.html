@@ -154,11 +154,21 @@
     }
 
     .tag {
-      font-size: 0.8em;
-      color: #fff;
-      background-color: #9D00FF;
-      padding: 5px 10px;
-      border-radius: 20px;
+        font-size: 0.8em;
+        color: #fff;
+        background-color: #9D00FF;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: clamp(0.8em, 2.5vw, 1em); /* Adjusts size dynamically based on screen width */
+        padding: 5px 10px;
+        border-radius: 20px;
+        white-space: nowrap;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap; /* Allows tags to wrap onto the next line */
+        gap: 5px; /* Adds spacing between tags */
     }
 
     .tag.flutter { background-color: #47C5FB; }
