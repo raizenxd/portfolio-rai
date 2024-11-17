@@ -6,7 +6,7 @@
   <title>Portfolio - Raizen John Sangalang</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -15,7 +15,7 @@
     }
 
     body {
-      font-family: 'Lato', sans-serif;
+      font-family: 'Poppins', sans-serif;
       line-height: 1.6;
       padding: 60px;
       background-color: var(--bg-color, #ffffff);
@@ -72,6 +72,11 @@
       transition: transform 0.3s, box-shadow 0.3s;
       animation: fadeInUp 0.8s ease forwards;
       opacity: 0; /* Initially hidden for animation */
+      display: flex;
+     
+  flex-direction: column;
+  justify-content: space-between; /* Ensures spacing between content and the link */
+  height: 100%;
     }
 
     .project:nth-child(1) { animation-delay: 0.2s; }
@@ -87,7 +92,7 @@
       margin-bottom: 10px;
       font-size: 1.5em;
       color: var(--accent-color);
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .project p {
@@ -96,6 +101,7 @@
     }
 
     .project a {
+    position: relative;
       display: inline-block;
       margin-top: 10px;
       text-decoration: none;
@@ -147,6 +153,31 @@
       box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
     }
 
+    .tag {
+      font-size: 0.8em;
+      color: #fff;
+      background-color: #9D00FF;
+      padding: 5px 10px;
+      border-radius: 20px;
+    }
+
+    .tag.flutter { background-color: #47C5FB; }
+    .tag.nosql { background-color: #F58220; }
+    .tag.tensorflow { background-color: #FF6F00; }
+    .tag.android { background-color: #3DDC84; }
+    .tag.nodejs { background-color: #68A063; }
+    .tag.expressjs { background-color: #353535; }
+    .tag.heroku { background-color: #6762A6; }
+    .tag.mongodb { background-color: #4CAF50; }
+    .tag.googleplay { background-color: #34A853; }
+    .tag.golang{ background-color: #00ACC1; }
+    .tag.mysql{ background-color: #4285F4; }
+    .tag.firebase{ background-color: #FFCA28; }
+    .tag.nestjs{ background-color: #E0234E; }
+    .tag.reactjs{ background-color: #61DAFB; }
+    .tag.typescript{ background-color: #007ACC; }
+    .tag.nextjs{ background-color: #000000; }
+
     @keyframes fadeInUp {
       0% {
         transform: translateY(20px);
@@ -172,22 +203,40 @@
     <div class="project">
       <h3>Company Project: Kuponji</h3>
       <p>Kuponji is a mobile application tool that enables SMBs to create simple and easy coupons, providing favorable offers to consumers.</p>
+      <div class="tags">
+        <span class="tag googleplay">Google Cloud</span>
+        <span class="tag flutter">Flutter</span>
+        <span class="tag mysql">MySQL</span>
+        <span class="tag firebase">Firebase</span>
+        <span class="tag golang">Golang</span>
+
+      </div>
       <a href="https://play.google.com/store/apps/details?id=com.hoolisoftware.kuponji&hl=en" target="_blank">View Project</a>
     </div>
 
     <div class="project">
       <h3>Personal Project: MAGÁRAL ‘TANG KULITAN</h3>
       <p>An Android-based learning application teaching Kulitan (Indigenous Script of Kapampangan) with interactive lessons and quizzes.</p>
-      <a href="https://drive.google.com/drive/folders/1UizrSA7tvcp8XN85K7kCNvlQi0bijl0U?usp=sharing" target="_blank">View Project</a>
+      <div class="tags">
+        <span class="tag flutter">Flutter</span>
+        <span class="tag nosql">NoSQL</span>
+        <span class="tag tensorflow">TensorFlow Lite</span>
+        <span class="tag firebase">Firebase</span>
+      </div>
+      <a href="https://drive.google.com/file/d/14KBqibeWausbUe5Fgm_Hpv0svKsHgidf/view?usp=sharing" target="_blank">View Project</a>
     </div>
 
     <div class="project">
       <h3>Zaki Chatbot App</h3>
       <p>A chatbot application for computation and information searches, usable offline. Built with Bottender, Node.js, and Express.js.</p>
+      <div class="tags">
+        <span class="tag nodejs">Node.js</span>
+        <span class="tag expressjs">Express.js</span>
+        <span class="tag heroku">Heroku</span>
+      </div>
       <a href="https://www.facebook.com/profile.php?id=100070919642485" target="_blank">View Project</a>
     </div>
   </section>
-
   <footer>
     <p>&copy; 2024 Raizen John Sangalang. All rights reserved.</p>
   </footer>
